@@ -2,5 +2,10 @@
   "name": "scaffold-jquery-bootstrap-project",
   "version": "0.0.0",
   "dependencies": {
+    "jquery": "~2.2.0",
+    "bootstrap-sass": "~3.3.6",
+    "bourbon": "~4.2.6",
+    "bitters": "~1.2.0",
+    "Ionicons": "ionicons#~2.0.1"
   }
 }
