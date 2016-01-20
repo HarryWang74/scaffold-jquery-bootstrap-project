@@ -1,4 +1,4 @@
-// Generated on 2016-01-20 using generator-jekyllrb 1.4.1
+// Generated on 2016-01-18 using generator-jekyllrb 1.4.1
 'use strict';
 
 // Directory reference:
@@ -23,7 +23,9 @@ module.exports = function (grunt) {
     watch: {
       sass: {
         files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
-        tasks: ['sass:server']
+        tasks: [
+          'sass:server'
+        ]
       },
       jekyll: {
         files: [
@@ -39,7 +41,7 @@ module.exports = function (grunt) {
           src: [
             '.jekyll/**/*.html',
             '.tmp/css/**/*.css',
-            '{.tmp,<%= yeoman.app %>}/js/**/*.js',
+            '<%= yeoman.app %>/js/**/*.js',
             '{<%= yeoman.app %>}/_bower_components/**/*.js',
             '<%= yeoman.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
           ]
