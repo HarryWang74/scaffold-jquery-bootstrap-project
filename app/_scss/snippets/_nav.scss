@@ -1,0 +1,82 @@
+nav{
+    .home-btn{
+        i{
+            font-size: 60px;
+        }
+    }
+    border-bottom: 1px solid #333;
+    ul{
+        float: right;
+        display: inline-block;
+         @include transition(transform 0.3s ease-in-out);
+        li{
+            font-size: 18px;
+            color: #333;
+            display: inline-block;
+            padding: 30px 30px 30px 0px;
+        }
+    }
+}
+
+#navicon-button{
+    display:none;
+    outline: none;
+}
+
+
+
+@include media($small-screen){
+    #navicon-button{
+        display: inline-block;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        z-index: 10;
+        height: 3rem;
+        background: none;
+        background-image: none;
+        border:none;
+        font-size: 60px;
+        i{
+            @include transition(transform 0.3s ease-in-out);
+        }
+    }
+
+    nav{
+        ul{
+            background: #333;
+            @include transform(translateX(100%));
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            padding-top:60px;
+            li{
+                display: block;
+                padding: 30px;
+            }   
+        }
+    }
+
+    nav.global-navigation--active{
+        ul{
+            @include transform(translateX(0%));
+            li a{
+                color: #fff;
+            }
+        }
+        #navicon-button{
+            background: none;
+            border: none;
+            i{
+                @include transform(rotate(180deg));
+                color: #fff;
+            }
+            i:before {
+                content: $ionicon-var-ios-close-empty;
+            }           
+        }    
+    }
+}

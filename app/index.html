@@ -15,16 +15,30 @@
     <script src="_bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
     <!-- endbuild -->
 </head>
-<body>
+<body style="height: 1500px;">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12"><h1>Hello <i class="icon ion-home"></i></h1>
+            <div class="col-lg-12">
+
+    <nav>    
+        <button id="navicon-button" class="navicon-button">
+            <i class="ion-ios-more"></i>
+        </button>
+
+        <a class="home-btn" href="/"><i class="ion-ios-home"></i></a> 
+        <ul class="list-unstyled">
+            <li><a href="#">Menu Item</a></li>
+            <li><a href="#">Menu Item</a></li>
+            <li><a href="#">Menu Item</a></li>
+        </ul>    
+    </nav>
 
             </div>
         </div>
     </div>
 
 <!-- build:js(app) /js/scripts.js -->
+<script src="/js/hamburger-menu.js"></script>
 <script src="/js/main.js"></script>
 <!-- endbuild -->
 </body>
